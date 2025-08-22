@@ -1,121 +1,107 @@
-# MPV Multi-Audio Track Mixer - Enhanced Audio Experience for MPV Player
-
-## Оптимизированное описание для лучшего SEO
-
-### 🌟 Лучший способ слушать несколько аудиодорожек одновременно в MPV!
-
-Этот скрипт Lua для MPV позволяет воспроизводить **несколько аудиодорожек одновременно** с индивидуальной регулировкой громкости каждой дорожки. Идеальное решение для:
-
-- Прослушивания комментариев режиссера вместе с основной дорожкой
-- Сравнения дубляжей на разных языках
-- Анализа звукового оформления фильмов
-- Изучения языков с параллельным воспроизведением
-
-### 🔑 Ключевые особенности
-
-- **Индивидуальная громкость** для каждой аудиодорожки
-- **Интуитивное управление** с клавиатуры
-- **Автоматическая активация** всех дорожек при загрузке
-- **Визуальный OSD-интерфейс** с прогресс-барами
-- **Портативная установка** без дополнительных зависимостей
-
-### ⚙️ Технические детали
-
-- Совместимость: **MPV Player** (тестировано на [mpv-winbuild](https://github.com/zhongfly/mpv-winbuild/releases))
-- Язык: Lua
-- Лицензия: MIT
-- Статус: **Стабильная версия** (не планируются дальнейшие улучшения)
+# MPV Multi-Audio Track Mixer - Enhanced Audio Experience for MPV Player  
+# MPV Multi-Audio Track Mixer - Улучшенный опыт работы с несколькими аудиодорожками  
 
 ---
 
-## English Version
+## 🌟 Overview | Обзор  
 
-### 🌟 Ultimate Multi-Audio Experience for MPV Player!
+**EN:**  
+This Lua script for MPV allows **simultaneous playback of multiple audio tracks** with individual volume control and mute options. It supports both numeric keypad and standard keyboard hotkeys, features an OSD volume interface, and automatically remembers per-track volume across sessions.  
 
-This Lua script for MPV enables **simultaneous playback of multiple audio tracks** with individual volume control for each track. Perfect for:
-
-- Listening to director's commentary with main audio
-- Comparing language dubs side-by-side
-- Analyzing film sound design
-- Language learning with parallel audio tracks
-
-### 🔑 Key Features
-
-- **Per-track volume control**
-- **Keyboard-centric workflow**
-- **Automatic activation** of all audio tracks
-- **Visual OSD interface** with progress bars
-- **Portable installation** with no dependencies
-
-### ⚙️ Technical Specifications
-
-- Compatibility: **MPV Player** (tested with [mpv-winbuild](https://github.com/zhongfly/mpv-winbuild/releases))
-- Language: Lua
-- License: MIT
-- Status: **Stable release** (no further improvements planned)
+**RU:**  
+Этот Lua-скрипт для MPV позволяет **одновременно воспроизводить несколько аудиодорожек** с индивидуальной регулировкой громкости и возможностью выключения звука. Поддерживаются горячие клавиши как для цифровой клавиатуры, так и для обычной, предусмотрен OSD-интерфейс для громкости и автоматическое сохранение настроек громкости между сессиями.  
 
 ---
 
-## 📥 Установка | Installation
+## 🔑 Key Features | Ключевые особенности  
 
-### Для Portable-версии MPV:
-1. Скачайте скрипт: [multi-audio.lua](multi-audio.lua)
-2. Поместите файл в директорию:
-   ```
-   <MPV.exe directory>\portable_config\scripts\
-   ```
+**EN:**  
+- Per-track volume control with persistent saving  
+- OSD interface with volume bars and active track indicator  
+- Mute toggle per track  
+- Supports both numpad and non-numpad keyboards  
+- Automatic activation of all audio tracks on file load  
 
-### Для стандартной установки MPV:
-```
+**RU:**  
+- Индивидуальная регулировка громкости с сохранением настроек  
+- OSD-интерфейс с индикаторами громкости и текущей дорожки  
+- Возможность отключения звука для выбранной дорожки  
+- Поддержка клавиатур с NumPad и без него  
+- Автоматическая активация всех аудиодорожек при загрузке файла  
+
+---
+
+## ⚙️ Technical Details | Технические детали  
+
+**EN:**  
+- Compatibility: MPV Player (tested on [mpv-winbuild](https://github.com/zhongfly/mpv-winbuild/releases))  
+- Language: Lua  
+- License: MIT  
+- Status: Active stable script  
+
+**RU:**  
+- Совместимость: MPV Player (тестировалось на [mpv-winbuild](https://github.com/zhongfly/mpv-winbuild/releases))  
+- Язык: Lua  
+- Лицензия: MIT  
+- Статус: Стабильный рабочий скрипт  
+
+---
+
+## 📥 Installation | Установка  
+
+**EN (Portable version):**  
+1. Download the script: [multi-audio.lua](multi-audio.lua)  
+2. Place it into:  <MPV.exe directory>\portable_config\scripts\\>
+
+
+**RU (Portable-версия):**  
+1. Скачайте скрипт: [multi-audio.lua](multi-audio.lua)  
+2. Поместите его в директорию:  <MPV.exe directory>\portable_config\scripts\\>
+
+**Scripts directory | Директория для скрипта**
+
 %APPDATA%\mpv\scripts\multi-audio.lua
-```
 
-### 📋 Требования | Requirements
-- Современная версия MPV Player (рекомендуется mpv-winbuild)
-- Поддержка Lua в MPV
-- Windows (тестировалось на Windows 10/11)
+
 
 ---
 
-## ⌨️ Управление | Controls
+## ⌨️ Controls | Управление  
 
-| Комбинация              | Действие                          | Combination             | Action                            |
-|-------------------------|-----------------------------------|-------------------------|-----------------------------------|
-| `Ctrl + ↑`              | Предыдущая дорожка                | `Ctrl + ↑`              | Previous track                    |
-| `Ctrl + ↓`              | Следующая дорожка                 | `Ctrl + ↓`              | Next track                        |
-| `Ctrl + →`              | +10% громкости                    | `Ctrl + →`              | +10% volume                       |
-| `Ctrl + ←`              | -10% громкости                    | `Ctrl + ←`              | -10% volume                       |
-| `Ctrl + Shift + →`      | +25% громкости                    | `Ctrl + Shift + →`      | +25% volume                       |
-| `Ctrl + Shift + ←`      | -25% громкости                    | `Ctrl + Shift + ←`      | -25% volume                       |
-
----
-
-## ℹ️ Важная информация | Important Notes
-
-Этот скрипт был создан с помощью **DeepSeek** и предоставляется "как есть". Автор не планирует дальнейшую поддержку или развитие проекта. Тем не менее, скрипт полностью функционален и готов к использованию.
-
-This script was created using **DeepSeek** and is provided "as is". The author does not plan to maintain or improve it further. However, the script is fully functional and ready to use.
+| Numpad Key | Non-Numpad Key | EN Description          | RU Описание                  |  
+|------------|----------------|-------------------------|------------------------------|  
+| `NumPad 8` | `Ctrl + ↑`     | Select previous track   | Предыдущая дорожка           |  
+| `NumPad 2` | `Ctrl + ↓`     | Select next track       | Следующая дорожка            |  
+| `NumPad 4` | `Ctrl + ←`     | Decrease volume (step)  | Уменьшить громкость (шаг)    |  
+| `NumPad 6` | `Ctrl + →`     | Increase volume (step)  | Увеличить громкость (шаг)    |  
+| `NumPad 5` | `Ctrl + M`     | Toggle mute             | Вкл/выкл звук                |  
+| `NumPad -` | `Ctrl + -`     | Large decrease volume   | Уменьшить громкость (много)  |  
+| `NumPad +` | `Ctrl + =`     | Large increase volume   | Увеличить громкость (много)  |  
 
 ---
 
-## 📂 Пример структуры папок | Example Directory Structure
+## 📂 Example Directory Structure | Пример структуры папок  
+
 ```
 MPV_portable/
 ├── mpv.exe
 ├── mpv.conf
 └── portable_config/
-    └── scripts/
-        └── multi-audio.lua  <-- Основной скрипт
+└── scripts/
+└── multi-audio.lua
 ```
 
 ---
 
-## 🔎 Почему этот репозиторий уникален? | Why This Repository Stands Out
+## ℹ️ Notes | Важные замечания  
 
-- **Единственное решение** для параллельного прослушивания аудиодорожек в MPV
-- **Оптимизировано для реального использования** без лишних функций
-- **Простая установка** - всего один файл Lua
-- **Не требует настройки** - работает сразу после установки
-- **Полностью бесплатно** с открытым исходным кодом (MIT License)
+**EN:**  
+- Saves per-track volumes globally and restores them automatically.  
+- Works out-of-the-box with no dependencies.  
+- Provided under MIT license.  
 
-Если вы искали "mpv multiple audio tracks", "mpv audio mixer" или "how to play two audio tracks in mpv" - вы нашли идеальное решение!
+**RU:**  
+- Громкость дорожек сохраняется глобально и восстанавливается автоматически.  
+- Работает "из коробки", без зависимостей.  
+- Распространяется под лицензией MIT.  
+
